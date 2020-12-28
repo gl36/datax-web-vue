@@ -3,10 +3,10 @@
     <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside" />
      <div :class="{hasTagsView:needTagsView}" class="main-container">
       <div :class="{'fixed-header':fixedHeader}">
-      <navbar />
-      <sidebar class="sidebar-container" />
-      <app-main />
-       </div>
+        <navbar />
+        <sidebar class="sidebar-container" />
+        <app-main />
+      </div>
     </div>
   </div>
 </template>

@@ -1,11 +1,11 @@
 <template>
-  <section class="app-main">
+  <div class="app-main">
     <transition name="fade-transform" mode="out-in">
       <keep-alive :include="cachedViews">
         <router-view :key="key" />
       </keep-alive>
     </transition>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -26,7 +26,7 @@ export default {
 .app-main {
   /* 50= navbar  50  */
   min-height: calc(100vh - 50px);
-  width: 100%;
+  // width: 100%;
   position: relative;
   overflow: hidden;
 }

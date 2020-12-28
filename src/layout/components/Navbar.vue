@@ -1,5 +1,9 @@
 <template>
   <div class="navbar">
+     <div style="display:flex; height: 50px; line-height: 50px; float: left;align-items:center;" >
+          <img style="padding-left: 10px; width: 32px; height: 22px; line-height: 30px; vertical-align: middle;" src="../../../public/logo.png" />
+          <span style="margin-left: 15px; font-size: 18px;  font-weight: 600;color: #000 ">{{title}}</span>
+     </div>
     <hamburger id="hamburger-container" :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
 
     <!-- <breadcrumb id="breadcrumb-container" class="breadcrumb-container" /> -->
@@ -58,6 +62,11 @@ export default {
       'device'
     ])
   },
+  data() {
+    return {
+      title: '大数据管理平台'
+    }
+  },
   methods: {
     toggleSideBar() {
       this.$store.dispatch('app/toggleSideBar')
@@ -72,6 +81,16 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 300;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+  margin: 0px;
+  // background: #2f96e2;
+  border-bottom: none;
+
   height: 50px;
   overflow: hidden;
   position: relative;
